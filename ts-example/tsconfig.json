@@ -19,7 +19,7 @@
     /* Redirect output structure to the directory. */
     "outDir": "./dist/",
     /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
-    // "rootDir": "./scr/",
+    // "rootDir": "",
     // "composite": true,                     /* Enable project compilation */
     // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
     /* Do not emit comments to output. */
@@ -70,13 +70,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
   },
   // 指定需要包含文件
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   // 排除文件
-  "exclude": [
-    "node_modules",
-    "lib",
-    "tests"
-  ]
+  "exclude": ["node_modules", "lib", "tests"]
 }
