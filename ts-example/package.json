@@ -8,9 +8,7 @@
     "build": "webpack --mode=production --config ./build/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "TypeScript"
-  ],
+  "keywords": ["TypeScript"],
   "author": "MoonCheung <salvador23@163.com>",
   "license": "MIT",
   "devDependencies": {
