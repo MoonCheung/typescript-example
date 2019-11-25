@@ -8,10 +8,13 @@
     "build": "webpack --mode=production --config ./build/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["TypeScript"],
+  "keywords": [
+    "TypeScript"
+  ],
   "author": "MoonCheung <salvador23@163.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^12.12.12",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.18.2",
