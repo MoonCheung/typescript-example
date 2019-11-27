@@ -14,7 +14,11 @@
   "author": "MoonCheung <salvador23@163.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
     "@types/node": "^12.12.12",
+    "@types/source-map": "^0.5.7",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.18.2",
@@ -25,5 +29,8 @@
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0"
+  }
 }
