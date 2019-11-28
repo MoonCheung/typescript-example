@@ -10,7 +10,10 @@
     "lint": "eslint src --ext .js,.ts",
     "test": "jest"
   },
-  "keywords": ["TypeScript", "Babel"],
+  "keywords": [
+    "TypeScript",
+    "Babel"
+  ],
   "author": "MoonCheung <salvador23@163.com>",
   "license": "MIT",
   "devDependencies": {

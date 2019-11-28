@@ -1,6 +1,6 @@
-const math = require('../src/main');
+const math = require('../src/math');
 
-test('add: 1 + 2 = 3', () => {
+test('adds: 1 + 2 = 3', () => {
   expect(math.adds(1, 2)).toBe(3);
 });
 
