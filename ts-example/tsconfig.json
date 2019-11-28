@@ -75,5 +75,11 @@
   // 指定需要包含文件
   "include": ["src/**/*"],
   // 排除文件
-  "exclude": ["node_modules", "lib", "tests"]
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+  ]
 }
