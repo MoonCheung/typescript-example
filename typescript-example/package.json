@@ -1,22 +1,26 @@
 {
-  "name": "ts-example",
+  "name": "typescript-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Developing typescript examples based on webpack is conducive to accumulating practical experience",
   "main": "./src/index.ts",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "webpack --mode=production --config ./build/webpack.config.js",
-    "type-check": "tsc --watch",
+    "check-types": "tsc --watch",
     "lint": "eslint src --ext .js,.ts",
     "test": "jest"
   },
   "keywords": [
     "TypeScript",
+    "webpack",
     "Babel"
   ],
   "author": "MoonCheung <salvador23@163.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
     "@types/jasmine": "^3.5.0",
     "@types/jest": "^24.0.0",
     "@types/jquery": "^3.3.31",
@@ -29,7 +33,7 @@
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "fork-ts-checker-webpack-plugin": "^3.1.1",
+    "fork-ts-checker-webpack-plugin": "^4.1.4",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.0.0",
     "prettier": "^1.18.2",

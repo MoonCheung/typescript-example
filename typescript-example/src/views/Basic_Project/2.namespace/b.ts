@@ -4,14 +4,14 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-26 23:09:55
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-26 23:42:21
+ * @LastEditTime: 2020-05-18 01:57:17
  */
 
 namespace Shape {
-    let pi = Math.PI;
-    export function cricle (r: number) {
-        return pi * r ** 2;
-    }
+  let pi = Math.PI;
+  export function cricle (r: number) {
+      return pi * r ** 2;
+  }
 }
 
 // 被编译出来js文件加入HTML文件来运行打印的

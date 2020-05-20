@@ -1,8 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const forkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const {
-  CheckerPlugin
-} = require('awesome-typescript-loader')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+// const { CheckerPlugin } = require('awesome-typescript-loader');
 const path = require('path');
 
 module.exports = {
@@ -13,30 +11,30 @@ module.exports = {
     path: path.resolve(__dirname, '../dist/')
   },
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
+    extensions: ['.js', '.ts', '.tsx']
   },
   module: {
-    rules: [{
-      test: /\.tsx?$/i,
-      use: [{
-        // loader: 'ts-loader',
-        loader: 'awesome-typescript-loader',
-        options: {
-          transpileOnly: true
-        }
-      }, ],
-      exclude: [
-        path.resolve(__dirname, 'node_modules')
-      ],
-    }, ],
+    rules: [
+      {
+        test: /\.tsx?$/i,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true
+            }
+          }
+        ],
+        exclude: [path.resolve(__dirname, 'node_modules')]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './public/index.html'
     }),
-    //TODO: 暂时注释掉，编译出来文件时间：6000毫秒
-    // new forkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin()
     // TODO：编译文件时间：2000多毫秒
-    new CheckerPlugin()
-  ],
+    // new CheckerPlugin()
+  ]
 };
