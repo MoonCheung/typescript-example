@@ -2,7 +2,7 @@
   "name": "typescript-example",
   "version": "1.0.0",
   "description": "Developing typescript examples based on webpack is conducive to accumulating practical experience",
-  "main": "./src/index.ts",
+  "main": "./src/index.html",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "webpack --mode=production --config ./build/webpack.config.js",
@@ -29,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.2",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
