@@ -4,18 +4,18 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-22 23:15:40
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-23 00:15:27
+ * @LastEditTime: 2020-05-24 15:41:42
  */
 
 let obj = {
-    a: 1,
-    b: 2,
-    c: 3,
+  a: 1,
+  b: 2,
+  c: 3
 };
 
 interface Obj {
-    a: number;
-    b: number;
+  a: number;
+  b: number;
 }
 
 // keyof T 对对象做些约束
@@ -29,8 +29,8 @@ let value: Obj['a'];
 // }
 
 // 泛型函数对一些对象约束些...
-function getValues<T, K extends keyof T> (obj: T, keys: K[]): T[K][] {
-    return keys.map((key) => obj[key]);
+function getValues<T, K extends keyof T>(obj: T, keys: K[]): T[K][] {
+  return keys.map(key => obj[key]);
 }
 
 console.log(getValues(obj, ['a', 'b'])); // [ 1, 2 ]

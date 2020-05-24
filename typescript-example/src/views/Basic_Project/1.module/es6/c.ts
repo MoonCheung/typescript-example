@@ -4,7 +4,7 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-25 22:26:53
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-25 22:51:57
+ * @LastEditTime: 2020-05-24 15:42:33
  */
 
 import { a, b, c } from './a'; // 批量导入
@@ -17,11 +17,11 @@ import myFunction from './a'; //导出默认函数
 console.log(a, b, c);
 
 let p: P = {
-    x: 1,
-    y: '2',
-    z: {
-        a: 'hello obj',
-    },
+  x: 1,
+  y: '2',
+  z: {
+    a: 'hello obj'
+  }
 };
 
 console.log('interface:', p);

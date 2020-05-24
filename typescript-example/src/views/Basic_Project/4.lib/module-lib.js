@@ -1,11 +1,11 @@
 const version = '1.0.0';
 
 function doSomething() {
-    console.log('moduleLib do something');
+  console.log('moduleLib do something');
 }
 
 function moduleLib(options) {
-    console.log(options);
+  console.log(options);
 }
 
 moduleLib.version = version;

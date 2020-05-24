@@ -4,7 +4,7 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-21 21:58:15
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-21 22:25:37
+ * @LastEditTime: 2020-05-24 17:19:23
  */
 
 let a = 1;
@@ -16,7 +16,7 @@ let d = (x = 1) => x + 1;
 // console.log(d()); // 打印： 2
 
 interface Foo {
-    bar: number;
+  bar: number;
 }
 
 /** **** 第一次实例Demo ****** */

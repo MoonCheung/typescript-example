@@ -4,7 +4,7 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-27 16:15:50
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-27 17:15:08
+ * @LastEditTime: 2020-05-24 15:45:38
  */
 import $ from 'jquery';
 import m from 'moment';
@@ -22,14 +22,14 @@ umdLib.doSomething();
 
 // 模块插件
 declare module 'moment' {
-    export function myFunction(): void;
+  export function myFunction(): void;
 }
 m.myFunction = () => {};
 
 // 全局插件
 declare global {
-    namespace globalLib {
-        function doAnyting(): void;
-    }
+  namespace globalLib {
+    function doAnyting(): void;
+  }
 }
 globalLib.doAnyting = () => {};

@@ -4,35 +4,35 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-21 22:50:25
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-22 00:39:06
+ * @LastEditTime: 2020-05-24 15:42:00
  */
 
 let s: string = '1';
 
 // 接口兼容性
 interface X {
-    a: number;
-    b: string;
+  a: number;
+  b: string;
 }
 
 // 接口兼容性
 interface Y {
-    a: number;
-    b: string;
-    c: object;
+  a: number;
+  b: string;
+  c: object;
 }
 
 let x: X = {
-    a: 1,
-    b: '2',
+  a: 1,
+  b: '2'
 };
 
 let y: Y = {
-    a: 1,
-    b: '2',
-    c: {
-        d: 'hello obj',
-    },
+  a: 1,
+  b: '2',
+  c: {
+    d: 'hello obj'
+  }
 };
 
 x = y; // 完全兼容
@@ -40,9 +40,9 @@ x = y; // 完全兼容
 
 // 函数兼容性
 type Handler = (a: number, b: number) => void;
-function hof (handler: Handler) {
-    console.log('handler:', handler);
-    return handler;
+function hof(handler: Handler) {
+  console.log('handler:', handler);
+  return handler;
 }
 
 let handler1 = (a: number) => {};
@@ -62,14 +62,14 @@ let handler3 = (a: string) => {};
 // hof(handler3);  // 完全不兼容
 
 interface Point3D {
-    x: number;
-    y: number;
-    z: number;
+  x: number;
+  y: number;
+  z: number;
 }
 
 interface Point2D {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 }
 
 let p3d = (point: Point3D) => {};
@@ -80,12 +80,12 @@ p3d = p2d; // 同样完全兼容
 
 // 3) 返回值类型
 let f1 = () => ({
-    name: 'Alice',
+  name: 'Alice'
 });
 
 let g1 = () => ({
-    name: 'Alice',
-    location: '北京',
+  name: 'Alice',
+  location: '北京'
 });
 
 f1 = g1; // 完全兼容
@@ -94,18 +94,18 @@ f1 = g1; // 完全兼容
 // 4) 函数重载
 function overload(a: number, b: number): number;
 function overload(a: string, b: string): string;
-function overload (a: any, b: any): any {}
+function overload(a: any, b: any): any {}
 
 // 5) 枚举兼容性
 enum Fruit {
-    apple,
-    Banana,
+  apple,
+  Banana
 }
 
 enum Color {
-    Red,
-    Blue,
-    Green,
+  Red,
+  Blue,
+  Green
 }
 
 let fruit: Fruit.apple = 1;
@@ -114,23 +114,23 @@ let no: number = Fruit.apple; // 完全兼容
 
 // 6)类兼容性
 class A {
-    // 构造器
-    constructor (a: number, b: number) {}
-    id: number = 1;
-    // 私有成员
-    private name: string = 'hello class A';
+  // 构造器
+  constructor(a: number, b: number) {}
+  id: number = 1;
+  // 私有成员
+  private name: string = 'hello class A';
 }
 
 class B {
-    // 构造器
-    constructor (a: number) {}
-    // 静态
-    static s = 1;
-    id: number = 2;
-    // 私有成员
-    private name: object = {
-        a: 'hello 私有对象',
-    };
+  // 构造器
+  constructor(a: number) {}
+  // 静态
+  static s = 1;
+  id: number = 2;
+  // 私有成员
+  private name: object = {
+    a: 'hello 私有对象'
+  };
 }
 
 // 子类C继承父类A
@@ -145,7 +145,7 @@ aa = cc; // 完全兼容
 
 // 7)泛型兼容性
 interface Empty<T> {
-    // value: T;
+  // value: T;
 }
 
 let num1: Empty<number> = {};
@@ -154,13 +154,13 @@ let str1: Empty<string> = {};
 num1 = str1; // 完全兼容
 
 let log1 = <T>(x: T): T => {
-    console.log('x');
-    return x;
+  console.log('x');
+  return x;
 };
 
 let log2 = <T>(y: T): T => {
-    console.log('y');
-    return y;
+  console.log('y');
+  return y;
 };
 
 log1 = log2; // 完全兼容

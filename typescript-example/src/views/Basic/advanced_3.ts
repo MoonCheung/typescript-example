@@ -4,12 +4,12 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-22 23:15:40
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-23 01:03:42
+ * @LastEditTime: 2020-05-24 15:41:45
  */
 
 interface Obj {
-    a: number;
-    b: number;
+  a: number;
+  b: number;
 }
 
 // 将T中的所有属性设为只读

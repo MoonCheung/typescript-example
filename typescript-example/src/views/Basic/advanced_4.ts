@@ -4,10 +4,20 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-22 23:15:40
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-11-23 01:19:25
+ * @LastEditTime: 2020-05-24 15:41:48
  */
 
-type TypeName<T> = T extends string ? 'string' : T extends number ? 'number' : T extends boolean ? 'boolean' : T extends undefined ? 'undefined' : T extends Function ? 'function' : 'object';
+type TypeName<T> = T extends string
+  ? 'string'
+  : T extends number
+  ? 'number'
+  : T extends boolean
+  ? 'boolean'
+  : T extends undefined
+  ? 'undefined'
+  : T extends Function
+  ? 'function'
+  : 'object';
 
 type T1 = TypeName<string>;
 type T2 = TypeName<number[]>;

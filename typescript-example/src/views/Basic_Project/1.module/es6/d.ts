@@ -1,3 +1,3 @@
-export = function () {
-    console.log("I'm default");
+export = function() {
+  console.log("I'm default");
 };
