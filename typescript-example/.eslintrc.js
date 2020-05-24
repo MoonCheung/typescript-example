@@ -4,7 +4,11 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  extends: ['plugin:prettier/recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint'
+  ],
   rules: {
     /**
      * off 或 0：表示不验证规则

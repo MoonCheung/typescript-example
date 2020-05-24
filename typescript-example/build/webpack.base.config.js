@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-// const { CheckerPlugin } = require('awesome-typescript-loader');
 const path = require('path');
 
 module.exports = {
@@ -34,7 +33,5 @@ module.exports = {
       template: './public/index.html'
     }),
     new ForkTsCheckerWebpackPlugin()
-    // TODO：编译文件时间：2000多毫秒
-    // new CheckerPlugin()
   ]
 };
