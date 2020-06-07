@@ -20,7 +20,7 @@ function* getEntryPoint(step) {
 
 fs.readdirSync('./src/views/Javascript30').filter(step => {
   for (let entryPoint of getEntryPoint(step)) {
-    entries[entryPoint.replace(/\/index.*/, '').replace(/^\.\//, '')] = entryPoint;
+    entries[entryPoint.replace(/\/index.*/, '').replace(/^\.\/src\//, '')] = entryPoint;
   }
 });
 
@@ -55,19 +55,13 @@ module.exports = {
   plugins: [
     ...Object.keys(entries).map(entry => {
       return new HtmlWebpackPlugin({
-        template: path.join(__dirname, `../${entry}`, 'index.html'),
+        template: path.join(__dirname, `../src/${entry}`, 'index.html'),
         filename: `${entry}/index.html`,
         chunks: [entry]
       });
     }),
     new CopyWebpackPlugin({
       patterns: [
-        ...Object.keys(entries).map(entry => {
-          return {
-            from: `${entry}/*.+(md|html)`,
-            to: outPath
-          };
-        }),
         // {
         //   from: './src/assets/**/*',
         //   to: outPath
