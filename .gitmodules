@@ -1,0 +1,3 @@
+[submodule "typescript-exercises"]
+	path = typescript-exercises
+	url = https://github.com/MoonCheung/typescript-exercises.git
