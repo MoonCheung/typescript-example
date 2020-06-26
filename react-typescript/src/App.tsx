@@ -15,7 +15,7 @@ const Header = (props: HeaderType) => <p className='head'>{props.name}</p>;
 const App = () => (
   <Router>
     <div className='App'>
-      <Row gutter={16}>
+      <Row>
         <Col className='gutter-row' span={6}>
           <div className='gutter-box'>
             <img src={logo} className='App-logo' alt='logo' />
@@ -24,6 +24,14 @@ const App = () => (
               <li>
                 <Link className='App-link' to='/drag'>
                   拖曳
+                </Link>
+              </li>
+            </ul>
+            <Header name='Hook 实战篇' />
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
+              <li>
+                <Link className='App-link' to='/counter'>
+                  计数器
                 </Link>
               </li>
             </ul>
