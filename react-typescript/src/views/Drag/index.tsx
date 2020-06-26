@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-import '@/styles/drag.less';
+import '@/styles/index.less';
 
 class Drag extends React.Component {
   // 创建一个 ref 来存储 textInput 的 DOM 元素
