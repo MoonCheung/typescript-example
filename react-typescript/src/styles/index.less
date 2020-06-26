@@ -9,3 +9,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.container {
+  & > li {
+    list-style-type: none;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    background: #eee;
+  }
+}
