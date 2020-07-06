@@ -34,6 +34,16 @@ const App = () => (
                   计数器
                 </Link>
               </li>
+              <li>
+                <Link className='App-link' to='/anime'>
+                  anima 块
+                </Link>
+              </li>
+              <li>
+                <Link className='App-link' to='/drags'>
+                  拖曳
+                </Link>
+              </li>
             </ul>
           </div>
         </Col>
