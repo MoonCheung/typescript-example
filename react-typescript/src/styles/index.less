@@ -42,3 +42,32 @@ code {
     position: relative;
   }
 }
+
+// 进度条样式
+.progress_wrap {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: flex-start;
+  & > label {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    max-width: 500px;
+    & > span {
+      margin-right: 20px;
+    }
+    & > .ant-slider {
+      width: 400px;
+      max-width: 400px;
+    }
+  }
+  & > .block {
+    width: 80px;
+    height: 80px;
+    margin-top: 50px;
+    background-color: #eee;
+  }
+}

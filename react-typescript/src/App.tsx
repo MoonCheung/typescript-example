@@ -44,6 +44,11 @@ const App = () => (
                   拖曳
                 </Link>
               </li>
+              <li>
+                <Link className='App-link' to='/progress'>
+                  进度条
+                </Link>
+              </li>
             </ul>
           </div>
         </Col>
