@@ -1,0 +1,61 @@
+html {
+  font-size: 16px;
+}
+
+.home {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+  padding: 0;
+  margin: 0;
+}
+
+// 侧边栏
+.sidebar {
+  height: 100vh;
+  text-align: center;
+  .box {
+    background-color: #41b883;
+  }
+  .box .box-item {
+    border-bottom: 1px solid #666;
+    color: #eee;
+  }
+  .box .title {
+    margin: 0;
+    padding: 10px;
+    background-color: #41b883;
+  }
+  .box-item-content {
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(54, 49, 49);
+    margin: 0;
+    padding-left: 0;
+    transition: all 0.5s ease-out;
+  }
+  ul {
+    list-style: none;
+  }
+  ul li {
+    padding: 0 5px;
+  }
+  .box {
+    &:hover,
+    &:active {
+      .box-item {
+        &:hover,
+        &:active {
+          .box-item-content {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 其内容
+.content {
+  padding: 2rem;
+}
