@@ -1,18 +1,53 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+const Index = () => import('@/views/Index.vue');
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/Index.vue')
+    props: true,
+    component: Index
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/basis/:id',
+    name: 'Basis',
+    props: true,
+    component: Index,
+    children: [
+      {
+        path: 'incAndDec',
+        name: 'IncAndDecs',
+        component: () => import('@/views/Basis/IncAndDec.vue')
+      },
+      {
+        path: 'count',
+        name: 'Counts',
+        component: () => import('@/views/Basis/count.vue')
+      },
+      {
+        path: 'prop',
+        name: 'Props',
+        component: () => import('@/views/Basis/props.vue')
+      },
+      {
+        path: 'event',
+        name: 'Events',
+        component: () => import('@/views/Basis/event.vue')
+      }
+    ]
+  },
+  {
+    path: '/js30/:id',
+    name: 'js30',
+    props: true,
+    component: Index,
+    children: [
+      {
+        path: 'drumKit',
+        name: 'DurmKits',
+        component: () => import('@/views/Javascript30/DurmKit.vue')
+      }
+    ]
   }
 ];
 

@@ -3,42 +3,37 @@
     <div class="sidebar">
       <img alt="Vue logo" src="@/assets/logo.png" />
       <div class="box">
-        <div class="box-item">
-          <p class="title">Account</p>
-          <ul class="box-item-content">
-            <li>language</li>
-            <li>love</li>
-            <li>picture</li>
+        <div class="box_item">
+          <p class="title">{{ basisName }}</p>
+          <ul class="box_item_content">
+            <li>
+              <router-link to="/basis/1/incAndDec">增减量</router-link>
+            </li>
+            <li>
+              <router-link to="/basis/2/count">计算总数</router-link>
+            </li>
+            <li>
+              <router-link to="/basis/3/prop">Props 实例</router-link>
+            </li>
+            <li>
+              <router-link to="/basis/4/event">$emit&$on(废弃) 实例</router-link>
+            </li>
           </ul>
         </div>
-        <div class="box-item">
-          <p class="title">Messages</p>
-          <ul class="box-item-content">
-            <li>language</li>
-            <li>love</li>
-            <li>picture</li>
-          </ul>
-        </div>
-        <div class="box-item ">
-          <p class="title">Settings</p>
-          <ul class="box-item-content">
-            <li>language</li>
-            <li>love</li>
-            <li>picture</li>
-          </ul>
-        </div>
-        <div class="box-item">
-          <p class="title">Logout</p>
-          <ul class="box-item-content">
-            <li>language</li>
-            <li>love</li>
-            <li>picture</li>
+        <div class="box_item">
+          <p class="title">{{ js30Name }}</p>
+          <ul class="box_item_content">
+            <li>
+              <router-link to="/js30/1/drumKit">JS Durm Kit</router-link>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="content">
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <component :is="Component" />
+      </router-view>
     </div>
   </div>
 </template>
@@ -49,6 +44,12 @@ import { useRouter, useRoute } from 'vue-router';
 
 export default defineComponent({
   name: 'Home',
+  data() {
+    return {
+      basisName: 'Vue3 基础篇',
+      js30Name: '基于Vue3的仿Javascript30'
+    };
+  },
   setup() {
     // 第一种路由方法
     const router = useRouter();

@@ -15,11 +15,6 @@
   padding: 30px;
 }
 
-#app a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
 #app a.router-link-exact-active {
   color: #42b983;
 }
