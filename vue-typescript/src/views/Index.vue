@@ -21,6 +21,14 @@
           </ul>
         </div>
         <div class="box_item">
+          <p class="title">{{ shizhanName }}</p>
+          <ul class="box_item_content">
+            <li>
+              <router-link to="/shizhan/1/todoList">TodoList MVVM</router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="box_item">
           <p class="title">{{ js30Name }}</p>
           <ul class="box_item_content">
             <li>
@@ -47,6 +55,7 @@ export default defineComponent({
   data() {
     return {
       basisName: 'Vue3 基础篇',
+      shizhanName: 'Vue3 实战篇',
       js30Name: '基于Vue3的仿Javascript30'
     };
   },

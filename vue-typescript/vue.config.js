@@ -11,8 +11,5 @@ module.exports = () => ({
   // webpack链式操作
   chainWebpack: config => {
     config.resolve.alias.set('@', path.join(__dirname, 'src'));
-  },
-  devServer: {
-    port: 8081
   }
 });

@@ -37,6 +37,19 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/shizhan/:id',
+    name: 'ShiZhan',
+    props: true,
+    component: Index,
+    children: [
+      {
+        path: 'todoList',
+        name: 'TodoLists',
+        component: () => import('@/views/ShiZhan/todoList.vue')
+      }
+    ]
+  },
+  {
     path: '/js30/:id',
     name: 'js30',
     props: true,
