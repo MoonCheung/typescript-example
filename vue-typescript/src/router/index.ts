@@ -48,19 +48,6 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/ShiZhan/todoList.vue')
       }
     ]
-  },
-  {
-    path: '/js30/:id',
-    name: 'js30',
-    props: true,
-    component: Index,
-    children: [
-      {
-        path: 'drumKit',
-        name: 'DurmKits',
-        component: () => import('@/views/Javascript30/DurmKit.vue')
-      }
-    ]
   }
 ];
 

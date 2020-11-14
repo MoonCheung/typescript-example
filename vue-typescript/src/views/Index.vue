@@ -4,7 +4,7 @@
       <img alt="Vue logo" src="@/assets/logo.png" />
       <div class="box">
         <div class="box_item">
-          <p class="title">{{ basisName }}</p>
+          <p class="title">{{ names.basisName }}</p>
           <ul class="box_item_content">
             <li>
               <router-link to="/basis/1/incAndDec">增减量</router-link>
@@ -21,18 +21,10 @@
           </ul>
         </div>
         <div class="box_item">
-          <p class="title">{{ shizhanName }}</p>
+          <p class="title">{{ names.shizhanName }}</p>
           <ul class="box_item_content">
             <li>
               <router-link to="/shizhan/1/todoList">TodoList MVVM</router-link>
-            </li>
-          </ul>
-        </div>
-        <div class="box_item">
-          <p class="title">{{ js30Name }}</p>
-          <ul class="box_item_content">
-            <li>
-              <router-link to="/js30/1/drumKit">JS Durm Kit</router-link>
             </li>
           </ul>
         </div>
@@ -47,19 +39,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent, reactive, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+
+interface NameType {
+  basisName: string;
+  shizhanName: string;
+}
 
 export default defineComponent({
   name: 'Home',
-  data() {
-    return {
-      basisName: 'Vue3 基础篇',
-      shizhanName: 'Vue3 实战篇',
-      js30Name: '基于Vue3的仿Javascript30'
-    };
-  },
   setup() {
+    const names = reactive<NameType>({
+      basisName: 'Vue3 基础篇',
+      shizhanName: 'Vue3 实战篇'
+    });
     // 第一种路由方法
     const router = useRouter();
     const route = useRoute();
@@ -68,6 +62,10 @@ export default defineComponent({
       console.log('查看路由器:', router);
       console.log('查看路由:', route.name);
     });
+
+    return {
+      names
+    };
   }
 });
 </script>
