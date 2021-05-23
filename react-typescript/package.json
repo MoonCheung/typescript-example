@@ -2,6 +2,7 @@
   "name": "react-typescript",
   "version": "0.1.0",
   "private": true,
+  "author": "MoonCheung <salvador23@163.com>",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",

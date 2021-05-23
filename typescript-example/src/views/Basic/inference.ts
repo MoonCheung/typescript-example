@@ -1,10 +1,9 @@
 /*
  * @Description: 类型检查机制
  * @Author: MoonCheung
- * @Github: https://github.com/MoonCheung
  * @Date: 2019-11-21 21:58:15
- * @LastEditors: MoonCheung
- * @LastEditTime: 2020-05-24 17:19:23
+ * @Copyright 2020 MoonCheung
+ * @FilePath: \web_dynamic\web_practice\ts_project\typescript-example\src\views\Basic\inference.ts
  */
 
 let a = 1;

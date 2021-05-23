@@ -26,6 +26,9 @@
             <li>
               <router-link to="/shizhan/1/todoList">TodoList MVVM</router-link>
             </li>
+            <li>
+              <router-link to="/shizhan/2/canvas">canvas图形</router-link>
+            </li>
           </ul>
         </div>
       </div>

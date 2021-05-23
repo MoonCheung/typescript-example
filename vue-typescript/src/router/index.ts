@@ -46,6 +46,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'todoList',
         name: 'TodoLists',
         component: () => import('@/views/ShiZhan/todoList.vue')
+      },
+      {
+        path: 'canvas',
+        name: 'canvasIndex',
+        component: () => import('@/views/ShiZhan/canvas.vue')
       }
     ]
   }
