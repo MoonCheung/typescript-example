@@ -80,7 +80,7 @@
     "**/*.spec.tsx",
     "**/*.test.ts",
     "**/*.test.tsx",
-    "src/views/Basic/*",
-    "src/views/Basic_Project/*"
+    "src/views/basic/*",
+    "src/views/basic_project/*"
   ]
 }
