@@ -3,8 +3,6 @@
  * @Author: MoonCheung
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-08-27 12:34:53
- * @LastEditors: MoonCheung
- * @LastEditTime: 2020-05-24 15:41:24
  */
 
 // 数字枚举
@@ -41,8 +39,6 @@ const enum Month {
 }
 
 let month = [Month.Two, Month.Four, Month.Treen];
-
-// console.log(month);
 
 // 枚举类型
 enum E {

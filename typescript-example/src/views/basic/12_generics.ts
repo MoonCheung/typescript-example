@@ -1,10 +1,9 @@
 /*
  * @Description: 泛型函数与类
  * @Author: MoonCheung
- * @Github: https://github.com/MoonCheung
- * @Date: 2019-11-10 16:28:09
- * @LastEditors: MoonCheung
- * @LastEditTime: 2020-05-24 15:41:34
+ * @Date: 2022-06-12 14:52:35
+ * Copyright 2022 MoonCheung
+ * @FilePath: /my_project/typescript-samples/typescript-example/src/views/basic/12_generics.ts
  */
 
 // 泛型函数
@@ -32,7 +31,7 @@ objLog.run({
   a: 1
 });
 
-// 接口
+// 泛型接口
 interface Length {
   length: number;
 }
